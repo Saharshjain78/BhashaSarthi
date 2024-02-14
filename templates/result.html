@@ -4,14 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Translation Result</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d1caca;
+            margin: 0;
+            padding: 0;
+            color: #000;
+        }
+        html{
+            height: 100%;
+            width: 100%;
+        }
+        #main{
+            height: 100vh;
+            width: 100%;
+            /* background-color: #007bff; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #000;
+            text-align: center;
+            font-size: 36px;
+        }
+        strong {
+            font-weight: bold;
+        }
+        p {
+            margin: 10px 0;
+        }
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 16px;
+
+            text-decoration: none;
+            color: #007bff;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <h1>Translation Result</h1>
-    <p><strong>Original Text:</strong> {{ text }}</p>
-    <p><strong>Source Language:</strong> {{ src_lang }}</p>
-    <p><strong>Destination Language:</strong> {{ dest_lang }}</p>
-    <p><strong>Translated Text:</strong> {{ translated_text }}</p>
-    <a href="/">Translate another text</a>
+    <div id="main">
+        <div id="txt">
+            <h1>Translation Result</h1>
+            <p><strong>Original Text:</strong> {{ text }}</p>
+            <p><strong>Source Language:</strong> {{ src_lang }}</p>
+            <p><strong>Destination Language:</strong> {{ dest_lang }}</p>
+            <p><strong>Translated Text:</strong> {{ translated_text }}</p>
+            <a href="/">Translate another text</a>
+        </div>
+
+    </div>
+    
 </body>
 </html>
 
