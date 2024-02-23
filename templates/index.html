@@ -5,71 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Translator</title>
     <style>
-    	body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #2980b9, #2c3e50);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            width: 400px;
+            max-width: 90%;
         }
         h1 {
             text-align: center;
-            margin-top: 50px;
+            margin-bottom: 30px;
+            color: #333;
         }
         form {
-            width: 50%;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            color: #333;
         }
         textarea, input[type="text"], input[type="submit"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
+            padding: 12px;
+            margin-bottom: 20px;
             border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            transition: border-color 0.3s ease;
+        }
+        textarea:focus, input[type="text"]:focus {
+            border-color: #3498db;
         }
         input[type="submit"] {
-            background-color: #007bff;
+            background-color: #3498db;
             color: #fff;
             border: none;
             cursor: pointer;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease;
         }
         input[type="submit"]:hover {
-            background-color: #0056b3;
+            background-color: #2980b9;
         }
         footer {
             text-align: center;
-            margin-top: 50px;
+            margin-top: 20px;
         }
         footer h3 {
-            font-size: 14px;
+            font-size: 0.9rem;
+            color: #333;
         }
         footer a {
-            color: #007bff;
+            color: #3498db;
             text-decoration: none;
+            transition: color 0.3s ease;
         }
         footer a:hover {
-            text-decoration: underline;
+            color: #2980b9;
         }
     </style>
 </head>
 <body>
-	<h1>Translator</h1>
-    <form action="/" method="post">
-        <textarea name="text" placeholder="Enter text to translate" required></textarea><br>
-        <label for="src_lang">Source Language:</label>
-        <input type="text" name="src_lang" placeholder="Source Language" required><br>
-        <label for="dest_lang">Destination Language:</label>
-        <input type="text" name="dest_lang" placeholder="Destination Language" required><br>
-        <input type="submit" value="Translate">
-    </form> 
-    
-    <footer>
-        <h3>Made with ❤️ by <a href="https//github.com/redxdager">Yash Mehrotra</a></h3>
-    </footer>
+    <div class="container">
+        <h1>Translator</h1>
+        <form action="/" method="post">
+            <label for="text">Enter text to translate:</label>
+            <textarea name="text" placeholder="Enter text" required></textarea>
+            <label for="src_lang">Source Language:</label>
+            <input type="text" name="src_lang" placeholder="Source Language" required>
+            <label for="dest_lang">Destination Language:</label>
+            <input type="text" name="dest_lang" placeholder="Destination Language" required>
+            <input type="submit" value="Translate">
+        </form>
+        <footer>
+            <h3>Made with ❤️ by <a href="https://github.com/redxdager" target="_blank">Yash Mehrotra</a></h3>
+        </footer>
+    </div>
 </body>
 </html>
-
