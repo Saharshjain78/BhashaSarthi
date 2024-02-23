@@ -5,77 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Translation Result</title>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         body {
-            font-family: Arial, sans-serif;
-            background-color: #d1caca;
-            margin: 0;
-            padding: 0;
-            color: #000;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
         }
-        html{
-            height: 100%;
-            width: 100%;
-        }
-        #main{
-            height: 100vh;
-            width: 100%;
-            /* background-color: #007bff; */
+        #main {
             display: flex;
             align-items: center;
             justify-content: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #3498db, #9b59b6);
         }
-        
         .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
         h1 {
-            color: #000;
+            color: #333;
             text-align: center;
-            font-size: 36px;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
         strong {
             font-weight: bold;
+            color: #555;
         }
         p {
-            margin: 10px 0;
+            margin-bottom: 15px;
+            line-height: 1.6;
         }
         a {
-            display: block;
-            text-align: center;
-            margin-top: 20px;
-            font-size: 16px;
-
+            display: inline-block;
+            padding: 12px 30px;
+            margin-top: 30px;
+            background-color: #2ecc71;
+            color: #fff;
             text-decoration: none;
-            color: #007bff;
+            border-radius: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease;
         }
         a:hover {
-            text-decoration: underline;
+            background-color: #27ae60;
         }
     </style>
 </head>
 <body>
     <div id="main">
-        <div id="txt">
+        <div class="container">
             <h1>Translation Result</h1>
-            <p><strong>Original Text:</strong> {{ text }}</p>
+            <p><strong>Original Text:</strong><br>{{ text }}</p>
             <p><strong>Source Language:</strong> {{ src_lang }}</p>
             <p><strong>Destination Language:</strong> {{ dest_lang }}</p>
-            <p><strong>Translated Text:</strong> {{ translated_text }}</p>
+            <p><strong>Translated Text:</strong><br>{{ translated_text }}</p>
             <a href="/">Translate another text</a>
         </div>
-
     </div>
-    
 </body>
 </html>
-
