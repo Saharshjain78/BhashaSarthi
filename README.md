@@ -39,3 +39,11 @@ BhashaSarthi is a user-friendly language translation tool, breaking down barrier
     sudo docker run -p 5000:5000 bhashasarthi
 
   ```
+
+## About
+
+BhashaSarthi is a tool that empowers users with a fluid translation experience, breaking down language barriers to foster enhanced global communication and collaboration.
+
+## Contributing
+
+We welcome contributions from the community to improve BhashaSarthi and make it even more powerful and user-friendly. Feel free to open issues or submit pull requests.
