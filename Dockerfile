@@ -1,13 +1,11 @@
-FROM ubuntu:20.04
+FROM python:3.9-alpine
 
 WORKDIR /app/
 
 COPY req.txt /app/
 
-RUN apt-get update &&\
-	apt-get install -y python3 python3-pip
-
-RUN pip install --no-cache-dir -r req.txt
+RUN apk update &&\
+    pip install --no-cache-dir -r req.txt
 
 COPY . /app/
 
