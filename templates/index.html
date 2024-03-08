@@ -11,7 +11,7 @@
             box-sizing: border-box;
         }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; Not adding any fonts because the texts don't look good and were not understandble */
             background: linear-gradient(135deg, #2980b9, #2c3e50);
             color: #fff;
             display: flex;
@@ -41,7 +41,7 @@
             margin-bottom: 5px;
             color: #333;
         }
-        textarea, input[type="text"], input[type="submit"] {
+        textarea, select, input[type="submit"] {
             padding: 12px;
             margin-bottom: 20px;
             border: 1px solid #ccc;
@@ -49,7 +49,7 @@
             font-size: 1.1rem;
             transition: border-color 0.3s ease;
         }
-        textarea:focus, input[type="text"]:focus {
+        textarea:focus, select:focus {
             border-color: #3498db;
         }
         input[type="submit"] {
@@ -89,9 +89,32 @@
             <label for="text">Enter text to translate:</label>
             <textarea name="text" placeholder="Enter text" required></textarea>
             <label for="src_lang">Source Language:</label>
-            <input type="text" name="src_lang" placeholder="Source Language" required>
+            <select name="src_lang" required>
+                <option value="" disabled selected>Select Source Language</option>
+                <option value="en">English</option>
+                <option value="hi">Hindi</option>
+                <option value="bn">Bengali</option>
+                <!-- Add more Indian languages here -->
+            </select>
             <label for="dest_lang">Destination Language:</label>
-            <input type="text" name="dest_lang" placeholder="Destination Language" required>
+            <select name="dest_lang" required>
+                <option value="" disabled selected>Select Destination Language</option>
+                <option value="en">English</option>
+                <option value="hi">Hindi</option>
+                <option value="bn">Bengali</option>
+                <option value="mr">Marathi</option>
+                <option value="kn">Kannada</option>
+                <option value="te">Telugu</option>
+                <option value="ne">Nepali</option>
+                <option value="as">Assamese</option>
+                <option value="pa">Punjabi</option>
+                <option value="ta">Tamil</option>
+                <option value="awa">Awadhi</option>
+                <option value="ks">Kashmiri</option>
+                <option value="gu">Gujarati</option>
+                <option value="raj">Rajasthani</option>
+                <!-- Add more Indian languages here -->
+            </select>
             <input type="submit" value="Translate">
         </form>
         <footer>
